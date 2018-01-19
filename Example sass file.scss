@@ -1,0 +1,164 @@
+@import "colors";
+@import "fonts";
+@import "mixins/hexagon";
+@import "mixins/breakpoints";
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+	@include mq-range('1700px', '2000px') {
+		font-size: 2rem;
+	}
+}
+
+.title {
+	font-family: Helvetica-Bold, Sans-Serif;
+	font-weight: bold;
+	color: $dark-purple;
+	text-transform: uppercase;
+}
+
+.paragraph {
+	font-family: Helvetica, Sans-Serif;
+	color: $dark-purple;
+}
+
+.nav {
+	transition: 1s;
+	background-color: $nav-bg;
+	text-align: center;
+	height: 7vh;
+	width: 100vw;
+	z-index: 100;
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&__list {
+		padding: 0;
+		list-style-type: none;
+	}
+	&__item {
+		display: inline-block;
+		height: 7vh;
+	}
+	&__item:hover {
+		background-color: $dark-purple;
+	}
+	&__link:hover {
+		color: $white;
+	}
+	&__link {
+		display: inline-block;
+		padding: 0 27px;
+		line-height: 7vh;
+		color: $dark-purple;
+		text-decoration: none;
+		font-family: Helvetica, Sans-Serif;
+	}
+}
+
+.headerContainer {
+	background-color: $bright-purple;
+	height: 100vh;
+	color: $white;
+}
+
+.name {
+	font-family: Helvetica-Bold, Sans-Serif;
+	font-weight: bold;
+	font-size: 5.5rem;
+	margin: 0;
+	padding-bottom: 25px;
+}
+
+.function {
+	padding-top: 20px;
+	font-family: Helvetica-Light, Sans-Serif;
+	font-weight: 100;
+	font-size: 4rem;
+	margin: 0;
+}
+
+.text {
+	font-weight: bold;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	height: 100vh;
+	background:
+		linear-gradient(
+		rgba($dark-purple, 0.45),
+		rgba($dark-purple, 0.45)
+		),
+		url('../../resources/images/bg.jpg');
+		background-size: cover;
+
+}
+
+.line {
+	display: block;
+	color: $white;
+	border-style: solid;
+	width: 20%;
+}
+
+.scroll {
+	position: relative;
+	top: 30%;
+	border: 1px solid $white;
+	border-radius: 30px;
+	padding: 13px 28px;
+	margin: 10px auto;
+	font-family: Helvetica-Light, Sans-Serif;
+}
+
+.arrow-down {
+	position: relative;
+	top: 30%;
+	margin: 0 auto;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-top: 15px solid $white;
+}
+
+.profile {
+	margin: 100px 0 0 77px;
+	width: 500px;
+	height: 700px;
+	border-right: 3px solid $bright-purple;
+	@include mq('tablet-wide') {
+		margin: 30px auto;
+		width: 355px;
+		height: 500px;
+	}
+}
+
+.navScroll {
+	background-color: $dark-purple;
+	.nav__item:hover {
+		background-color: $nav-bg;
+	}
+	.nav__link:hover {
+		color: $dark-purple;
+	}
+	.nav__link {
+		color: $white;
+	}
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+
+
+
